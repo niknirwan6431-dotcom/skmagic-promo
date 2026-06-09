@@ -3,172 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SK Magic Promo RM17</title>
+<title>Promo Penapis Air RM17</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f6f6f6;
+background:linear-gradient(135deg,#ff0000,#b30000);
+color:white;
+overflow-x:hidden;
 }
 
-/* HERO */
 .hero{
-    background:linear-gradient(135deg,#c40000,#ff3b3b);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
 }
 
-.hero h1{
-    font-size:42px;
-    margin:0;
-    font-weight:800;
+.hero::before{
+content:'';
+position:absolute;
+width:600px;
+height:600px;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+top:-200px;
+right:-150px;
+filter:blur(50px);
 }
 
-.hero p{
-    font-size:18px;
-    margin-top:10px;
-    opacity:0.95;
-}
-
-/* BADGE */
-.badge{
-    display:inline-block;
-    background:#111;
-    color:#fff;
-    padding:6px 14px;
-    border-radius:20px;
-    margin-top:15px;
-    font-size:13px;
-}
-
-/* CONTAINER */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-}
-
-/* CARD */
 .card{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    margin-top:-40px;
+background:white;
+color:#222;
+max-width:900px;
+width:100%;
+border-radius:30px;
+padding:40px;
+text-align:center;
+box-shadow:0 25px 60px rgba(0,0,0,0.3);
+position:relative;
+overflow:hidden;
 }
 
-/* PRICE */
+.badge{
+background:red;
+color:white;
+display:inline-block;
+padding:10px 25px;
+border-radius:50px;
+font-weight:bold;
+font-size:18px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+h1{
+font-size:55px;
+margin-top:20px;
+color:red;
+line-height:1.1;
+}
+
 .price{
-    font-size:34px;
-    color:#c40000;
-    font-weight:800;
-    margin:10px 0;
+font-size:90px;
+font-weight:900;
+color:red;
+margin:15px 0;
+text-shadow:3px 3px 0 #ffd1d1;
 }
 
-/* FEATURES */
+.desc{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.timer-box{
+background:#ff0000;
+color:white;
+padding:25px;
+border-radius:20px;
+margin:25px 0;
+}
+
+.timer-title{
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+#timer{
+font-size:55px;
+font-weight:900;
+letter-spacing:3px;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:20px;
+background:#25D366;
+color:white;
+padding:20px 40px;
+font-size:24px;
+font-weight:bold;
+text-decoration:none;
+border-radius:60px;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.whatsapp:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
 .features{
-    margin-top:15px;
-    line-height:2;
-    font-size:16px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:30px;
 }
 
-/* BUTTON */
-.btn{
-    display:block;
-    text-align:center;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:18px;
-    border-radius:12px;
-    font-size:20px;
-    font-weight:bold;
-    margin-top:20px;
-    transition:0.3s;
+.feature{
+background:#fff5f5;
+padding:18px;
+border-radius:15px;
+font-weight:bold;
 }
 
-.btn:hover{
-    transform:scale(1.03);
+.flash{
+position:absolute;
+top:20px;
+left:-100px;
+width:250px;
+height:40px;
+background:rgba(255,255,255,0.6);
+transform:rotate(-45deg);
+animation:shine 3s infinite;
 }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-    margin-top:30px;
+@keyframes shine{
+0%{left:-300px;}
+100%{left:120%;}
 }
 
-.box{
-    background:white;
-    padding:20px;
-    border-radius:14px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    text-align:center;
-}
-
-/* FOOTER */
 .footer{
-    text-align:center;
-    padding:25px;
-    color:#888;
-    font-size:14px;
+margin-top:30px;
+font-size:14px;
+color:#777;
 }
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-    <h1>🔥 SK MAGIC PROMO RM17 🔥</h1>
-    <p>Penapis Air Premium Untuk Keluarga Anda</p>
-    <div class="badge">⚡ LIMITED TIME OFFER</div>
+<section class="hero">
+<div class="card">
+
+<div class="flash"></div>
+
+<div class="badge">
+🔥 PROMOSI TERHAD 🔥
 </div>
 
-<div class="container">
+<h1>PENAPIS AIR PREMIUM</h1>
 
-    <div class="card">
+<div class="price">
+RM17
+</div>
 
-        <h2>💧 SK Magic Water System</h2>
+<p class="desc">
+💧 Air lebih bersih • Mudah dipasang • Jimat & Berkualiti Tinggi
+</p>
 
-        <div class="price">RM17 SAHAJA</div>
+<div class="timer-box">
+<div class="timer-title">
+⏰ PROMO AKAN TAMAT DALAM:
+</div>
+<div id="timer">01:15:00</div>
+</div>
 
-        <div class="features">
-            ✔ Air bersih & berkualiti tinggi<br>
-            ✔ Pemasangan profesional<br>
-            ✔ Servis berkala tersedia<br>
-            ✔ Promosi terhad untuk pelanggan baru<br>
-        </div>
+<a
+href="https://wa.me/60123456789"
+class="whatsapp"
+id="waBtn"
+target="_blank">
+📲 TEMPAH SEKARANG
+</a>
 
-        <a class="btn" href="https://promomurahskmagic.great-site.net">
-            👉 WHATSAPP SEKARANG
-        </a>
-
-    </div>
-
-    <div class="grid">
-
-        <div class="box">
-            💧 Air Lebih Bersih
-        </div>
-
-        <div class="box">
-            🛠 Servis Profesional
-        </div>
-
-        <div class="box">
-            🚚 Seluruh Malaysia
-        </div>
-
-    </div>
-
+<div class="features">
+<div class="feature">✅ Harga Promo RM17</div>
+<div class="feature">✅ Stok Sangat Terhad</div>
+<div class="feature">✅ Penghantaran Seluruh Malaysia</div>
+<div class="feature">✅ Mudah Dipasang Sendiri</div>
 </div>
 
 <div class="footer">
-    © 2025 SK Magic Promo Landing Page
+Promosi khas hari ini sahaja.
 </div>
+
+</div>
+</section>
+
+<script>
+
+let duration = 4500;
+let remaining = duration;
+
+function updateTimer() {
+
+let hours = Math.floor(remaining / 3600);
+let minutes = Math.floor((remaining % 3600) / 60);
+let seconds = remaining % 60;
+
+document.getElementById("timer").innerHTML =
+String(hours).padStart(2,'0') + ":" +
+String(minutes).padStart(2,'0') + ":" +
+String(seconds).padStart(2,'0');
+
+if(remaining > 0){
+remaining--;
+}
+
+}
+
+setInterval(updateTimer,1000);
+updateTimer();
+
+document.getElementById("waBtn").addEventListener("click",function(){
+remaining = duration;
+});
+
+</script>
 
 </body>
 </html>
