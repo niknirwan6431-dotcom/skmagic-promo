@@ -1,80 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>SK Magic Test</title>
-
-<style>
-body{
-margin:0;
-background:black;
-color:white;
-text-align:center;
-font-family:Arial;
-}
-
-img{
-width:90%;
-margin-top:20px;
-border-radius:20px;
-box-shadow:0 0 30px gold;
-}
-
-button{
-margin-top:20px;
-padding:15px 25px;
-border:none;
-border-radius:30px;
-background:#25D366;
-color:white;
-font-size:18px;
-cursor:pointer;
-}
-
-#timer{
-font-size:40px;
-color:gold;
-margin-top:20px;
-}
-</style>
-</head>
-
-<body>
-
-<h2>🔥 SK MAGIC RM17</h2>
-
-<img src="promo.jpg">
-
-<div id="timer">01:15:00</div>
-
-<button id="btn">ORDER SEKARANG</button>
-
 <script>
 
-/* TIMER */
-let t = 4500;
+const numbers = [
+"60105332502",
+"60107849217",
+"60196304577",
+"601137602747"
+];
 
-setInterval(()=>{
+let index = localStorage.getItem("wa_index");
+index = (index === null || isNaN(index)) ? 0 : parseInt(index);
 
-let h = Math.floor(t/3600);
-let m = Math.floor((t%3600)/60);
-let s = t%60;
+/* BUTTON CLICK */
+document.getElementById("buy").addEventListener("click", function () {
 
-document.getElementById("timer").innerHTML =
-String(h).padStart(2,'0')+":"+
-String(m).padStart(2,'0')+":"+
-String(s).padStart(2,'0');
+let phone = numbers[index];
 
-if(t>0) t--;
+/* naikkan giliran */
+index = (index + 1) % numbers.length;
+localStorage.setItem("wa_index", index);
 
-},1000);
+/* link whatsapp */
+let url = "https://wa.me/" + phone +
+"?text=Saya%20berminat%20promo%20SK%20Magic%20RM17";
 
-/* CLICK TEST */
-document.getElementById("btn").addEventListener("click",function(){
-window.location.href="https://wa.me/60105332502?text=Test";
+window.location.href = url;
+
 });
 
 </script>
-
-</body>
-</html>
