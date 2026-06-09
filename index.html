@@ -3,43 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promo SK Magic RM17</title>
+<title>SK Magic Promo RM17</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#f4f6f8;
-    color:#333;
+    background:#f5f5f5;
 }
 
-.hero{
-    background:#0066cc;
+.header{
+    background:linear-gradient(135deg,#d60000,#ff2d2d);
     color:white;
     text-align:center;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
-.hero h1{
-    font-size:36px;
-    margin-bottom:10px;
+.header h1{
+    font-size:40px;
+    margin:0;
+}
+
+.header p{
+    font-size:18px;
+    margin-top:10px;
 }
 
 .container{
-    max-width:800px;
+    max-width:1100px;
     margin:auto;
     padding:20px;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.section-title{
+    text-align:center;
+    font-size:26px;
+    margin:30px 0 20px;
 }
 
-ul{
-    line-height:2;
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.price{
+    color:#d60000;
+    font-size:20px;
+    font-weight:bold;
 }
 
 .btn{
@@ -48,49 +76,111 @@ ul{
     background:#25D366;
     color:white;
     text-decoration:none;
-    padding:18px;
+    padding:15px;
+    margin-top:15px;
     border-radius:10px;
-    font-size:22px;
     font-weight:bold;
-    margin-top:20px;
+    font-size:18px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 .footer{
     text-align:center;
-    color:#777;
     padding:20px;
+    color:#777;
+    margin-top:30px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>🔥 Promo SK Magic RM17 🔥</h1>
-    <p>Dapatkan maklumat promosi terkini sekarang</p>
+<div class="header">
+    <h1>🔥 SK MAGIC PROMO RM17 🔥</h1>
+    <p>Penapis Air Premium Untuk Keluarga Anda</p>
 </div>
 
 <div class="container">
-    <div class="card">
 
-        <h2>Kenapa Pilih SK Magic?</h2>
+    <div class="section-title">Produk Popular</div>
 
-        <ul>
-            <li>✅ Air lebih bersih untuk keluarga</li>
-            <li>✅ Pemasangan profesional</li>
-            <li>✅ Servis berkala tersedia</li>
-            <li>✅ Promo RM17 terhad</li>
-        </ul>
+    <div class="products">
 
-        <a class="btn" href="https://promomurahskmagic.great-site.net">
-            WhatsApp Sekarang
-        </a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581579185169-3f6b7f8f2b49?auto=format&fit=crop&w=800&q=60">
+            <div class="card-body">
+                <h3>Water Purifier Premium</h3>
+                <div class="price">RM17 Promo</div>
+                <a class="btn" href="https://promomurahskmagic.great-site.net">
+                    WhatsApp Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=60">
+            <div class="card-body">
+                <h3>Air Purifier Home</h3>
+                <div class="price">RM17 Promo</div>
+                <a class="btn" href="https://promomurahskmagic.great-site.net">
+                    WhatsApp Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=60">
+            <div class="card-body">
+                <h3>Kitchen Water System</h3>
+                <div class="price">RM17 Promo</div>
+                <a class="btn" href="https://promomurahskmagic.great-site.net">
+                    WhatsApp Sekarang
+                </a>
+            </div>
+        </div>
 
     </div>
+
+    <div class="section-title">Kenapa Pilih SK Magic?</div>
+
+    <div class="features">
+
+        <div class="box">
+            💧 Air Bersih & Selamat
+        </div>
+
+        <div class="box">
+            🛠 Pemasangan Profesional
+        </div>
+
+        <div class="box">
+            🚚 Servis Seluruh Malaysia
+        </div>
+
+        <div class="box">
+            ⭐ Promosi Terhad
+        </div>
+
+    </div>
+
 </div>
 
 <div class="footer">
-    © 2025 Promo SK Magic
+    © 2025 SK Magic Promo Landing Page
 </div>
 
 </body>
