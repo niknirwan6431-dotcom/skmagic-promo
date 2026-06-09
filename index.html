@@ -1,119 +1,77 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SK Magic RM17 Promo</title>
+<title>SK Magic Test</title>
 
 <style>
-
 body{
 margin:0;
-font-family:Arial;
-background:#000;
+background:black;
 color:white;
 text-align:center;
+font-family:Arial;
 }
 
-/* BACKGROUND */
-body::before{
-content:'';
-position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,gold 1px,transparent 1px);
-background-size:45px 45px;
-opacity:.12;
-animation:move 20s linear infinite;
-}
-
-@keyframes move{
-0%{transform:translateY(0);}
-100%{transform:translateY(-200px);}
-}
-
-/* CONTAINER */
-.container{
-max-width:800px;
-margin:auto;
-padding:20px;
-}
-
-/* IMAGE */
 img{
-width:100%;
+width:90%;
+margin-top:20px;
 border-radius:20px;
-box-shadow:0 0 40px gold;
+box-shadow:0 0 30px gold;
 }
 
-/* BUTTON */
-a{
-display:inline-block;
+button{
 margin-top:20px;
+padding:15px 25px;
+border:none;
+border-radius:30px;
 background:#25D366;
 color:white;
-padding:18px 30px;
-border-radius:50px;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-box-shadow:0 0 25px #25D366;
+font-size:18px;
+cursor:pointer;
 }
 
+#timer{
+font-size:40px;
+color:gold;
+margin-top:20px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h2>🔥 SK MAGIC RM17</h2>
 
 <img src="promo.jpg">
 
-<h2>🔥 SK MAGIC RM17 PROMO</h2>
+<div id="timer">01:15:00</div>
 
-<p>Klik bawah untuk order sekarang</p>
-
-<a id="buy">📲 ORDER SEKARANG</a>
-
-</div>
+<button id="btn">ORDER SEKARANG</button>
 
 <script>
 
-/* WHATSAPP NUMBER LIST */
-const numbers = [
-"60105332502",
-"60107849217",
-"60196304577",
-"601137602747"
-];
+/* TIMER */
+let t = 4500;
 
-/* GET GLOBAL COUNTER */
-async function getIndex(){
-let res = await fetch("https://api.countapi.xyz/get/skmagic/global");
-let data = await res.json();
-return data.value || 0;
-}
+setInterval(()=>{
 
-/* INCREMENT GLOBAL COUNTER */
-async function updateIndex(){
-await fetch("https://api.countapi.xyz/hit/skmagic/global");
-}
+let h = Math.floor(t/3600);
+let m = Math.floor((t%3600)/60);
+let s = t%60;
 
-/* CLICK BUTTON */
-document.getElementById("buy").addEventListener("click", async function(){
+document.getElementById("timer").innerHTML =
+String(h).padStart(2,'0')+":"+
+String(m).padStart(2,'0')+":"+
+String(s).padStart(2,'0');
 
-let index = await getIndex();
+if(t>0) t--;
 
-let phone = numbers[index % numbers.length];
+},1000);
 
-/* naikkan global rotator */
-await updateIndex();
-
-/* redirect whatsapp */
-window.location.href =
-"https://wa.me/" + phone +
-"?text=" + encodeURIComponent("Saya berminat SK Magic RM17");
-
+/* CLICK TEST */
+document.getElementById("btn").addEventListener("click",function(){
+window.location.href="https://wa.me/60105332502?text=Test";
 });
 
 </script>
