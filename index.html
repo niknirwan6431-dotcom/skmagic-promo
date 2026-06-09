@@ -8,39 +8,45 @@
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f5f5f5;
 }
 
-.header{
+/* HERO */
+.hero{
     background:linear-gradient(135deg,#d60000,#ff2d2d);
     color:white;
     text-align:center;
     padding:60px 20px;
 }
 
-.header h1{
-    font-size:40px;
+.hero h1{
+    font-size:38px;
     margin:0;
 }
 
-.header p{
-    font-size:18px;
+.hero p{
     margin-top:10px;
+    font-size:18px;
 }
 
+/* COUNTDOWN */
+.countdown{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:16px;
+}
+
+/* CONTAINER */
 .container{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-.section-title{
-    text-align:center;
-    font-size:26px;
-    margin:30px 0 20px;
-}
-
+/* PRODUCTS */
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -70,6 +76,7 @@ body{
     font-weight:bold;
 }
 
+/* BUTTON */
 .btn{
     display:block;
     text-align:center;
@@ -83,7 +90,8 @@ body{
     font-size:18px;
 }
 
-.features{
+/* TESTIMONI */
+.testimoni{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:15px;
@@ -94,29 +102,47 @@ body{
     background:white;
     padding:20px;
     border-radius:12px;
-    text-align:center;
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
+/* FLOAT BUTTON */
+.float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
 .footer{
     text-align:center;
     padding:20px;
     color:#777;
-    margin-top:30px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
+<div class="hero">
     <h1>🔥 SK MAGIC PROMO RM17 🔥</h1>
-    <p>Penapis Air Premium Untuk Keluarga Anda</p>
+    <p>Promosi Terhad Untuk Hari Ini Sahaja</p>
+</div>
+
+<div class="countdown">
+    ⚡ Tawaran tamat dalam masa terhad — rebut sekarang!
 </div>
 
 <div class="container">
 
-    <div class="section-title">Produk Popular</div>
+    <h2 style="text-align:center;">Produk Popular</h2>
 
     <div class="products">
 
@@ -142,42 +168,34 @@ body{
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=60">
-            <div class="card-body">
-                <h3>Kitchen Water System</h3>
-                <div class="price">RM17 Promo</div>
-                <a class="btn" href="https://promomurahskmagic.great-site.net">
-                    WhatsApp Sekarang
-                </a>
-            </div>
-        </div>
-
     </div>
 
-    <div class="section-title">Kenapa Pilih SK Magic?</div>
+    <h2 style="text-align:center;margin-top:40px;">Testimoni Pelanggan</h2>
 
-    <div class="features">
+    <div class="testimoni">
 
         <div class="box">
-            💧 Air Bersih & Selamat
+            ⭐⭐⭐⭐⭐<br>
+            “Service cepat dan pemasangan sangat kemas!”
         </div>
 
         <div class="box">
-            🛠 Pemasangan Profesional
+            ⭐⭐⭐⭐⭐<br>
+            “Air memang bersih, sangat puas hati!”
         </div>
 
         <div class="box">
-            🚚 Servis Seluruh Malaysia
-        </div>
-
-        <div class="box">
-            ⭐ Promosi Terhad
+            ⭐⭐⭐⭐⭐<br>
+            “Promo memang berbaloi RM17 sahaja!”
         </div>
 
     </div>
 
 </div>
+
+<a class="float" href="https://promomurahskmagic.great-site.net">
+💬 WhatsApp
+</a>
 
 <div class="footer">
     © 2025 SK Magic Promo Landing Page
