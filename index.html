@@ -8,35 +8,39 @@
 <style>
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+    font-family:Arial, sans-serif;
+    background:#f6f6f6;
 }
 
 /* HERO */
 .hero{
-    background:linear-gradient(135deg,#d60000,#ff2d2d);
+    background:linear-gradient(135deg,#c40000,#ff3b3b);
     color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:80px 20px;
 }
 
 .hero h1{
-    font-size:38px;
+    font-size:42px;
     margin:0;
+    font-weight:800;
 }
 
 .hero p{
-    margin-top:10px;
     font-size:18px;
+    margin-top:10px;
+    opacity:0.95;
 }
 
-/* COUNTDOWN */
-.countdown{
+/* BADGE */
+.badge{
+    display:inline-block;
     background:#111;
     color:#fff;
-    text-align:center;
-    padding:10px;
-    font-size:16px;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-top:15px;
+    font-size:13px;
 }
 
 /* CONTAINER */
@@ -46,34 +50,28 @@ body{
     padding:20px;
 }
 
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
+/* CARD */
 .card{
     background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    margin-top:-40px;
 }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.card-body{
-    padding:15px;
-}
-
+/* PRICE */
 .price{
-    color:#d60000;
-    font-size:20px;
-    font-weight:bold;
+    font-size:34px;
+    color:#c40000;
+    font-weight:800;
+    margin:10px 0;
+}
+
+/* FEATURES */
+.features{
+    margin-top:15px;
+    line-height:2;
+    font-size:16px;
 }
 
 /* BUTTON */
@@ -83,15 +81,20 @@ body{
     background:#25D366;
     color:white;
     text-decoration:none;
-    padding:15px;
-    margin-top:15px;
-    border-radius:10px;
+    padding:18px;
+    border-radius:12px;
+    font-size:20px;
     font-weight:bold;
-    font-size:18px;
+    margin-top:20px;
+    transition:0.3s;
 }
 
-/* TESTIMONI */
-.testimoni{
+.btn:hover{
+    transform:scale(1.03);
+}
+
+/* GRID */
+.grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:15px;
@@ -101,30 +104,17 @@ body{
 .box{
     background:white;
     padding:20px;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* FLOAT BUTTON */
-.float{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 18px;
-    border-radius:50px;
-    font-size:16px;
-    font-weight:bold;
-    text-decoration:none;
-    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    border-radius:14px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    text-align:center;
 }
 
 /* FOOTER */
 .footer{
     text-align:center;
-    padding:20px;
-    color:#777;
+    padding:25px;
+    color:#888;
+    font-size:14px;
 }
 </style>
 </head>
@@ -133,69 +123,48 @@ body{
 
 <div class="hero">
     <h1>🔥 SK MAGIC PROMO RM17 🔥</h1>
-    <p>Promosi Terhad Untuk Hari Ini Sahaja</p>
-</div>
-
-<div class="countdown">
-    ⚡ Tawaran tamat dalam masa terhad — rebut sekarang!
+    <p>Penapis Air Premium Untuk Keluarga Anda</p>
+    <div class="badge">⚡ LIMITED TIME OFFER</div>
 </div>
 
 <div class="container">
 
-    <h2 style="text-align:center;">Produk Popular</h2>
+    <div class="card">
 
-    <div class="products">
+        <h2>💧 SK Magic Water System</h2>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1581579185169-3f6b7f8f2b49?auto=format&fit=crop&w=800&q=60">
-            <div class="card-body">
-                <h3>Water Purifier Premium</h3>
-                <div class="price">RM17 Promo</div>
-                <a class="btn" href="https://promomurahskmagic.great-site.net">
-                    WhatsApp Sekarang
-                </a>
-            </div>
+        <div class="price">RM17 SAHAJA</div>
+
+        <div class="features">
+            ✔ Air bersih & berkualiti tinggi<br>
+            ✔ Pemasangan profesional<br>
+            ✔ Servis berkala tersedia<br>
+            ✔ Promosi terhad untuk pelanggan baru<br>
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=60">
-            <div class="card-body">
-                <h3>Air Purifier Home</h3>
-                <div class="price">RM17 Promo</div>
-                <a class="btn" href="https://promomurahskmagic.great-site.net">
-                    WhatsApp Sekarang
-                </a>
-            </div>
-        </div>
+        <a class="btn" href="https://promomurahskmagic.great-site.net">
+            👉 WHATSAPP SEKARANG
+        </a>
 
     </div>
 
-    <h2 style="text-align:center;margin-top:40px;">Testimoni Pelanggan</h2>
-
-    <div class="testimoni">
+    <div class="grid">
 
         <div class="box">
-            ⭐⭐⭐⭐⭐<br>
-            “Service cepat dan pemasangan sangat kemas!”
+            💧 Air Lebih Bersih
         </div>
 
         <div class="box">
-            ⭐⭐⭐⭐⭐<br>
-            “Air memang bersih, sangat puas hati!”
+            🛠 Servis Profesional
         </div>
 
         <div class="box">
-            ⭐⭐⭐⭐⭐<br>
-            “Promo memang berbaloi RM17 sahaja!”
+            🚚 Seluruh Malaysia
         </div>
 
     </div>
 
 </div>
-
-<a class="float" href="https://promomurahskmagic.great-site.net">
-💬 WhatsApp
-</a>
 
 <div class="footer">
     © 2025 SK Magic Promo Landing Page
