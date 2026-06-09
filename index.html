@@ -3,64 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promo Penapis Air RM17</title>
+<title>SK Magic Promo RM17</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#ff0000,#b30000);
-color:white;
+background:#000;
 overflow-x:hidden;
-}
-
-.hero{
-min-height:100vh;
+font-family:Arial,sans-serif;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
+min-height:100vh;
+}
+
+.container{
 position:relative;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:600px;
-height:600px;
-background:rgba(255,255,255,0.08);
-border-radius:50%;
-top:-200px;
-right:-150px;
-filter:blur(50px);
-}
-
-.card{
-background:white;
-color:#222;
-max-width:900px;
 width:100%;
-border-radius:30px;
-padding:40px;
-text-align:center;
-box-shadow:0 25px 60px rgba(0,0,0,0.3);
-position:relative;
-overflow:hidden;
+max-width:800px;
 }
 
-.badge{
-background:red;
+.poster{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 40px #ffae00;
+animation:zoomEffect 6s infinite alternate;
+}
+
+@keyframes zoomEffect{
+from{transform:scale(1);}
+to{transform:scale(1.03);}
+}
+
+/* Motion Light */
+.light{
+position:absolute;
+top:-20%;
+left:-50%;
+width:50%;
+height:160%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.6),
+transparent
+);
+transform:rotate(25deg);
+animation:shine 4s linear infinite;
+pointer-events:none;
+}
+
+@keyframes shine{
+0%{
+left:-60%;
+}
+100%{
+left:150%;
+}
+}
+
+/* Lightning Effect */
+
+.lightning{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:white;
+opacity:0;
+pointer-events:none;
+animation:flash 7s infinite;
+}
+
+@keyframes flash{
+
+0%,90%,100%{
+opacity:0;
+}
+
+91%{
+opacity:0.6;
+}
+
+92%{
+opacity:0;
+}
+
+93%{
+opacity:0.4;
+}
+
+94%{
+opacity:0;
+}
+
+}
+
+/* Glow Border */
+
+.glow{
+position:absolute;
+inset:-5px;
+border-radius:25px;
+background:linear-gradient(
+45deg,
+gold,
+orange,
+yellow,
+gold
+);
+z-index:-1;
+filter:blur(20px);
+animation:rotateGlow 6s linear infinite;
+}
+
+@keyframes rotateGlow{
+
+0%{
+filter:blur(20px) hue-rotate(0deg);
+}
+
+100%{
+filter:blur(20px) hue-rotate(360deg);
+}
+
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
 color:white;
-display:inline-block;
-padding:10px 25px;
+text-decoration:none;
+padding:18px 30px;
 border-radius:50px;
+font-size:22px;
 font-weight:bold;
-font-size:18px;
+box-shadow:0 0 25px #25D366;
 animation:pulse 1s infinite;
 }
 
@@ -70,181 +157,27 @@ animation:pulse 1s infinite;
 100%{transform:scale(1);}
 }
 
-h1{
-font-size:55px;
-margin-top:20px;
-color:red;
-line-height:1.1;
-}
-
-.price{
-font-size:90px;
-font-weight:900;
-color:red;
-margin:15px 0;
-text-shadow:3px 3px 0 #ffd1d1;
-}
-
-.desc{
-font-size:22px;
-margin-bottom:25px;
-}
-
-.timer-box{
-background:#ff0000;
-color:white;
-padding:25px;
-border-radius:20px;
-margin:25px 0;
-}
-
-.timer-title{
-font-size:18px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-#timer{
-font-size:55px;
-font-weight:900;
-letter-spacing:3px;
-}
-
-.whatsapp{
-display:inline-block;
-margin-top:20px;
-background:#25D366;
-color:white;
-padding:20px 40px;
-font-size:24px;
-font-weight:bold;
-text-decoration:none;
-border-radius:60px;
-transition:0.3s;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.whatsapp:hover{
-transform:translateY(-5px) scale(1.05);
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:30px;
-}
-
-.feature{
-background:#fff5f5;
-padding:18px;
-border-radius:15px;
-font-weight:bold;
-}
-
-.flash{
-position:absolute;
-top:20px;
-left:-100px;
-width:250px;
-height:40px;
-background:rgba(255,255,255,0.6);
-transform:rotate(-45deg);
-animation:shine 3s infinite;
-}
-
-@keyframes shine{
-0%{left:-300px;}
-100%{left:120%;}
-}
-
-.footer{
-margin-top:30px;
-font-size:14px;
-color:#777;
-}
 </style>
 </head>
 <body>
 
-<section class="hero">
-<div class="card">
+<div class="container">
 
-<div class="flash"></div>
+<div class="glow"></div>
 
-<div class="badge">
-🔥 PROMOSI TERHAD 🔥
+<img src="promo.jpg" class="poster">
+
+<div class="light"></div>
+
+<div class="lightning"></div>
+
 </div>
 
-<h1>PENAPIS AIR PREMIUM</h1>
-
-<div class="price">
-RM17
-</div>
-
-<p class="desc">
-💧 Air lebih bersih • Mudah dipasang • Jimat & Berkualiti Tinggi
-</p>
-
-<div class="timer-box">
-<div class="timer-title">
-⏰ PROMO AKAN TAMAT DALAM:
-</div>
-<div id="timer">01:15:00</div>
-</div>
-
-<a
-href="https://wa.me/60123456789"
+<a href="https://wa.me/60123456789"
 class="whatsapp"
-id="waBtn"
 target="_blank">
-📲 TEMPAH SEKARANG
+📲 DAFTAR SEKARANG
 </a>
-
-<div class="features">
-<div class="feature">✅ Harga Promo RM17</div>
-<div class="feature">✅ Stok Sangat Terhad</div>
-<div class="feature">✅ Penghantaran Seluruh Malaysia</div>
-<div class="feature">✅ Mudah Dipasang Sendiri</div>
-</div>
-
-<div class="footer">
-Promosi khas hari ini sahaja.
-</div>
-
-</div>
-</section>
-
-<script>
-
-let duration = 4500;
-let remaining = duration;
-
-function updateTimer() {
-
-let hours = Math.floor(remaining / 3600);
-let minutes = Math.floor((remaining % 3600) / 60);
-let seconds = remaining % 60;
-
-document.getElementById("timer").innerHTML =
-String(hours).padStart(2,'0') + ":" +
-String(minutes).padStart(2,'0') + ":" +
-String(seconds).padStart(2,'0');
-
-if(remaining > 0){
-remaining--;
-}
-
-}
-
-setInterval(updateTimer,1000);
-updateTimer();
-
-document.getElementById("waBtn").addEventListener("click",function(){
-remaining = duration;
-});
-
-</script>
 
 </body>
 </html>
